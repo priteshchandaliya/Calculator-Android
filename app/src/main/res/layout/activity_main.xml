@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.sjsu.priteshchandaliya.mycalculator.MainActivity">
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="First number"
+        android:id="@+id/textView2"
+        android:paddingTop="10dp"
+
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/firstNumber"
+        android:layout_below="@+id/textView2"
+        android:layout_alignStart="@+id/textView2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Second number"
+        android:id="@+id/textView3"
+        android:layout_below="@+id/firstNumber"
+        android:layout_alignStart="@+id/firstNumber" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/secondNumber"
+        android:layout_below="@+id/textView3"
+        android:layout_alignStart="@+id/textView3" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/secondNumber"
+        android:layout_alignParentStart="true"
+        android:weightSum="1"
+        android:layout_alignBottom="@+id/tvresult">
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="71dp"
+            android:layout_height="58dp"
+            android:text="+"
+            android:id="@+id/buttonAdd"
+             />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="71dp"
+            android:layout_height="58dp"
+            android:text="-"
+            android:id="@+id/buttonSubstract"
+            />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="71dp"
+            android:layout_height="58dp"
+            android:text="*"
+            android:id="@+id/buttonMultiply" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="71dp"
+            android:layout_height="58dp"
+            android:text="/"
+            android:id="@+id/buttonDivide" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/tvresult">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/resultOutput"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textColor="#585858"
+             />
+    </LinearLayout>
+
+</RelativeLayout>
